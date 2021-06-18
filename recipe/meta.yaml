@@ -1,5 +1,5 @@
 {% set name = "dlatk" %}
-{% set version = "1.2.3" %}
+{% set version = "1.2.5" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/dlatk-{{ version }}.tar.gz
-  sha256: fc4c8f12c597623facb5100e6d836a191459655938c83ccc352df377bd07cebd
+  sha256: e843681f87f71075cb2de38ae48c96ce35e3b86d6d5621d74e97bc0515898d5c
 
 build:
   number: 0
@@ -41,6 +41,7 @@ test:
     - pip
   commands:
     - pip check
+    - dlatkInterface.py -h
 
 about:
   home: http://dlatk.wwbp.org
