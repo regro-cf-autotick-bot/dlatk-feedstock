@@ -41,6 +41,7 @@ test:
     - pip
   commands:
     - pip check
+    - dlatkInterface.py -h
 
 about:
   home: http://dlatk.wwbp.org
