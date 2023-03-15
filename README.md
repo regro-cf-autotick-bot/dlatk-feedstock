@@ -1,11 +1,11 @@
-About dlatk
-===========
+About dlatk-feedstock
+=====================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/dlatk-feedstock/blob/main/LICENSE.txt)
 
 Home: http://dlatk.wwbp.org
 
 Package license: GPL-3.0-only
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/dlatk-feedstock/blob/main/LICENSE.txt)
 
 Summary: End to end human text analysis package.
 
