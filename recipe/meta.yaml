@@ -7,18 +7,18 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/dlatk-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/dlatk-{{ version }}.tar.gz
   sha256: e843681f87f71075cb2de38ae48c96ce35e3b86d6d5621d74e97bc0515898d5c
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python {{ python_min }}
     - numpy
   run:
     - mysqlclient
@@ -26,7 +26,7 @@ requirements:
     - numpy
     - pandas >=0.20.3
     - patsy >=0.2.1
-    - python >=3.6
+    - python >={{ python_min }}
     - python-dateutil >=2.5.0
     - scikit-learn <0.24.0
     - scipy >=0.13.3
@@ -39,6 +39,7 @@ test:
     - dlatk.lexicainterface
   requires:
     - pip
+    - python {{ python_min }}
   commands:
     - pip check
     - dlatkInterface.py -h
